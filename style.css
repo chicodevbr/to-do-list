@@ -108,6 +108,10 @@ header {
   margin-bottom: 20px;
 }
 
-#task-checked {
+#taskchecked {
   margin-top: 20px;
+}
+
+.line-through {
+  text-decoration: line-through;
 }
