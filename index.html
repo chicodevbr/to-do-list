@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista de Tarefas</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lista de Tarefas</h1>
+
+      <div class="btn-container">
+        <button class="btn-show-add-tasks" onclick="showAddTasksModal()">
+          Criar Tarefa
+        </button>
+      </div>
+    </header>
+
+    <form action="index.html" method="post" id="to-do-form">
+      <button class="btn-close-modal" onclick="closeModal()">
+        <img
+          class="icon-close-btn"
+          src="./img/close-box-outline.svg"
+          alt="close icon"
+        />
+      </button>
+      <input
+        type="text"
+        name="new-task"
+        id="new-task"
+        placeholder="digite uma tarefa"
+      />
+      <div class="container-priority">
+        <input type="radio" name="priority" id="priority" value="Alta" />
+        <label for="priority">Alta</label>
+
+        <input type="radio" name="priority" id="priority" value="Média" />
+        <label for="priority">Média</label>
+
+        <input
+          type="radio"
+          name="priority"
+          id="priority"
+          value="Baixa"
+          checked
+        />
+        <label for="priority">Baixa</label>
+      </div>
+
+      <button type="submit" class="btn-add-task">Adicionar</button>
+
+      <p class="alert"></p>
+    </form>
+
+    <div class="to-do-list"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
