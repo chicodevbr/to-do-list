@@ -45,9 +45,9 @@ function showToDoList(clearList = false) {
   }
 
   if (toDoListArray.length > 0) {
-    toDoListArray.forEach((task) => {
-      toDoListContent.innerHTML += `<div class="card"><input type="checkbox" id="task-checked" name="task-checked"><p>${task.taskTitle}</p>
-          <p>${task.taskPriority}</p> <button class="btn-delete-task" onclick="deleteTask(event)">
+    toDoListArray.forEach((task, index) => {
+      toDoListContent.innerHTML += `<div class="card"><input type="checkbox" id="taskchecked" name="task-checked" onclick="checkedTask(event)" ><p>${task.taskTitle}</p>
+          <p>${task.taskPriority}</p> <button id="${index}" class="btn-delete-task" onclick="deleteTask(event)">
           <img class="icon-delete-btn" src="./img/trash-can-outline.svg" alt="delete icon">
         </button></div>`;
     });
@@ -65,6 +65,15 @@ function deleteTask(event) {
   localStorage.setItem('tasks', JSON.stringify(toDoListFiltered));
   showToDoList(true);
   location.reload();
+}
+
+function checkedTask(event) {
+  const target = event.target;
+  const targetAdd = target.parentNode.childNodes[1];
+
+  if (target.checked) {
+    targetAdd.style = 'text-decoration: line-through';
+  }
 }
 
 window.onload = () => {
