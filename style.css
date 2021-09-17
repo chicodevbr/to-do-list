@@ -29,8 +29,8 @@ header {
   margin: 0 auto;
   padding-top: 20px;
   padding: 10px;
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   background-color: #e7eadf;
   border: 1px solid grey;
   border-radius: 5px;
@@ -56,6 +56,7 @@ header {
   box-shadow: rgb(100 100 111 / 10%) 0px 7px 29px 0px;
   background: #7ec3be;
   margin-top: 10px;
+  margin-bottom: 60px;
   font-weight: bold;
   color: black;
   cursor: pointer;
@@ -104,14 +105,34 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  margin-top: 0px;
-  margin-bottom: 20px;
+  margin-top: 60px;
 }
 
 #taskchecked {
   margin-top: 20px;
 }
 
-.line-through {
+.isComplete {
   text-decoration: line-through;
+}
+
+.btn-show-add-tasks-not-done {
+  font-family: monospace;
+  border: 1px solid DarkSlateGray;
+  border-radius: 5px;
+  padding: 10px;
+  background: #7ec3be;
+  font-weight: bold;
+  color: DarkSlateGray;
+  cursor: pointer;
+}
+
+.lista-vazia {
+  margin-top: 40px;
+  font-size: 1.5rem;
+}
+
+#new-task {
+  width: 250px;
+  margin: 30px;
 }
