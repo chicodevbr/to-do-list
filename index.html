@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="./img/tasks-solid.svg"
+      type="image/gif"
+      sizes="16x16"
+    />
     <title>Lista de Tarefas</title>
   </head>
   <body>
@@ -14,6 +20,16 @@
       <div class="btn-container">
         <button class="btn-show-add-tasks" onclick="showAddTasksModal()">
           Criar Tarefa
+        </button>
+        <button class="btn-show-add-tasks" onclick="showAddTasksModalDone()">
+          Concluídas
+        </button>
+
+        <button
+          class="btn-show-add-tasks-not-done"
+          onclick="showAddTasksModalNotDone()"
+        >
+          A fazer
         </button>
       </div>
     </header>
@@ -49,9 +65,9 @@
         <label for="priority">Baixa</label>
       </div>
 
-      <button type="submit" class="btn-add-task">Adicionar</button>
-
       <p class="alert"></p>
+
+      <button type="submit" class="btn-add-task">Adicionar</button>
     </form>
 
     <div class="to-do-list"></div>
