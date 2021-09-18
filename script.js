@@ -151,8 +151,8 @@ function showAddTasksModalNotDone() {
   removeShowAddTasksModal();
   toDoListArray.filter((task) => {
     if (task.isComplete !== true) {
-      toDoListContent.innerHTML += `<div class="card"><input type="checkbox" id="taskchecked" name="task-checked" onclick="checkedTask(event)" ><p>${task.taskTitle}</p>
-          <p>${task.taskPriority}</p> <button  class="btn-delete-task" onclick="deleteTask(event)">
+      toDoListContent.innerHTML += `<div class="card"><input type="checkbox" id="taskchecked" name="task-checked" onclick="checkedTask(event)" ><p class="title" >${task.taskTitle}</p>
+          <p class="priority" >${task.taskPriority}</p> <button  class="btn-delete-task" onclick="deleteTask(event)">
           <img class="icon-delete-btn" src="./img/trash-can-outline.svg" alt="delete icon">
         </button></div>`;
     }
