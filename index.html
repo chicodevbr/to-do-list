@@ -15,7 +15,16 @@
   </head>
   <body>
     <header>
-      <h1>Lista de Tarefas</h1>
+      <div class="title-container">
+        <button class="btn-logo" onclick="showToDoList(true)">
+          <img
+            class="icon-list-btn"
+            src="./img/tasks-solid.svg"
+            alt="home icon"
+          />
+        </button>
+        <h1>Lista de Tarefas</h1>
+      </div>
 
       <div class="btn-container">
         <button class="btn-show-add-tasks" onclick="showAddTasksModal()">
@@ -24,10 +33,6 @@
 
         <button class="btn-show-add-tasks" onclick="showAddTasksModalDone()">
           Concluídas
-        </button>
-
-        <button class="btn-show-add-tasks" onclick="showToDoList(true)">
-          Todas
         </button>
 
         <button

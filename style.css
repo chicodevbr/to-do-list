@@ -17,6 +17,28 @@ header {
   font-weight: bold;
 }
 
+header h1 {
+  font-size: 2rem;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btn-logo {
+  border: none;
+  background: none;
+}
+
+.icon-list-btn {
+  width: 40px;
+  height: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 #to-do-form {
   display: none;
   align-items: center;
